@@ -1,0 +1,34 @@
+{
+  "name": "@ai-portal/plagiarism-checker-app",
+  "version": "1.0.1",
+  "description": "Kiểm tra đạo văn - Kiểm tra file hoặc đoạn tài liệu",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:backend": "npm --prefix backend run dev",
+    "backend": "npm --prefix backend run start",
+    "build": "vite build",
+    "build:basepath": "EMBED_BASE_PATH=/research/embed/plagiarism-checker vite build",
+    "build:pack": "sh -c 'PACK_SOURCE=.pack-build-$(date +%s); VITE_OUT_DIR=\"$PACK_SOURCE\" vite build && echo \"$PACK_SOURCE\"'",
+    "pack": "sh -c 'PACK_SOURCE=.pack-build-$(date +%s); VITE_OUT_DIR=\"$PACK_SOURCE\" vite build && PACK_SOURCE=\"$PACK_SOURCE\" node scripts/pack.mjs'",
+    "pack:build": "npm run pack",
+    "pack:basepath": "sh -c 'PACK_SOURCE=.pack-build-$(date +%s); EMBED_BASE_PATH=/research/embed/plagiarism-checker VITE_OUT_DIR=\"$PACK_SOURCE\" vite build && PACK_BASEPATH=1 PACK_SOURCE=\"$PACK_SOURCE\" node scripts/pack.mjs'",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide-react": "^0.454.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5",
+    "vite": "^5.4.10"
+  }
+}

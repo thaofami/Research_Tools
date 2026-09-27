@@ -1,0 +1,14 @@
+{
+  "name": "@ai-portal/plagiarism-checker-backend",
+  "version": "1.0.1",
+  "private": true,
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "PLAGIARISM_CHECKER_RUNTIME=local NODE_ENV=development node server.mjs",
+    "start": "PLAGIARISM_CHECKER_RUNTIME=local NODE_ENV=production node server.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

@@ -1,0 +1,201 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.dark body {
+  background: #020617;
+  color: #e2e8f0;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+.dark .bg-white {
+  background-color: #0f172a !important;
+}
+
+/* Nền trắng mờ (footer, kết quả) — trước đây vẫn sáng trên dark */
+.dark .bg-white\/90,
+.dark .bg-white\/95 {
+  background-color: rgba(2, 6, 23, 0.94) !important;
+}
+
+.dark .border-slate-200\/90 {
+  border-color: #334155 !important;
+}
+
+.dark .bg-slate-50,
+.dark .bg-slate-50\/40,
+.dark .bg-slate-50\/50,
+.dark .bg-slate-50\/80,
+.dark .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+.dark .border-slate-100,
+.dark .border-slate-200,
+.dark .border-slate-200\/80,
+.dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+
+.dark .text-slate-900,
+.dark .text-slate-800,
+.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-slate-600,
+.dark .text-slate-500 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* Hover nổi bật hơn trên nền tối */
+.dark .hover\:bg-slate-50:hover,
+.dark .hover\:bg-slate-100:hover {
+  background-color: #334155 !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #0f172a !important;
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Kết quả API dạng Markdown (bảng, tiêu đề) */
+.plagiarism-markdown {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: #1e293b;
+}
+.dark .plagiarism-markdown {
+  color: #e2e8f0;
+}
+.plagiarism-markdown h1 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  line-height: 1.35;
+}
+.plagiarism-markdown h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.875rem 0 0.375rem;
+  line-height: 1.35;
+}
+.plagiarism-markdown h3 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.25rem;
+}
+.plagiarism-markdown p {
+  margin: 0.5rem 0;
+}
+.plagiarism-markdown ul,
+.plagiarism-markdown ol {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+.plagiarism-markdown li {
+  margin: 0.25rem 0;
+}
+.plagiarism-markdown hr {
+  margin: 0.75rem 0;
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+}
+.dark .plagiarism-markdown hr {
+  border-top-color: #475569;
+}
+.plagiarism-markdown strong {
+  font-weight: 600;
+}
+.plagiarism-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.8125rem;
+}
+.plagiarism-markdown th,
+.plagiarism-markdown td {
+  border: 1px solid #cbd5e1;
+  padding: 0.375rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+.dark .plagiarism-markdown th,
+.dark .plagiarism-markdown td {
+  border-color: #475569;
+}
+.plagiarism-markdown th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+.dark .plagiarism-markdown th {
+  background: #334155;
+}
+.plagiarism-markdown tbody tr:nth-child(even) {
+  background: rgba(248, 250, 252, 0.6);
+}
+.dark .plagiarism-markdown tbody tr:nth-child(even) {
+  background: rgba(30, 41, 59, 0.5);
+}
+.plagiarism-markdown a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.dark .plagiarism-markdown a {
+  color: #93c5fd;
+}
+.plagiarism-markdown code {
+  font-size: 0.8125em;
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+  background: #f1f5f9;
+}
+.dark .plagiarism-markdown code {
+  background: #334155;
+}
+.plagiarism-markdown pre {
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  background: #f8fafc;
+  font-size: 0.8125rem;
+}
+.dark .plagiarism-markdown pre {
+  background: #0f172a;
+}
+.plagiarism-markdown pre code {
+  padding: 0;
+  background: transparent;
+}

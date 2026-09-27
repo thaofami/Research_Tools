@@ -1,0 +1,13 @@
+{
+  "id": "plagiarism-checker",
+  "alias": "plagiarismchecker",
+  "name": "Kiểm tra đạo văn",
+  "description": "Kiểm tra đạo văn cho file hoặc đoạn văn bản, xem chi tiết kết quả và cấu hình backend proxy.",
+  "keywords": ["kiem tra dao van", "dao van", "plagiarism", "kiem tra tai lieu", "plagiarism checker"],
+  "version": "1.0.1",
+  "type": "embedded",
+  "hasBackend": true,
+  "hasFrontendOnly": false,
+  "icon": "FileText",
+  "supported_languages": ["vi"]
+}
